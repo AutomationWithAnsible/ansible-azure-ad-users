@@ -1,0 +1,8 @@
+---
+
+user_name       : "{{ azure_ad_user | default('ansible.test') }}"
+state           : "{{ azure_ad_state | default('present') }}"
+password        : "{{ azure_ad_password | default('Test1234') }}"
+tenant_domain   : "{{ azure_ad_tenant_domain | default('AnsibleDirectory.onmicrosoft.com') }}"
+client_id       : "{{ azure_ad_client_id | default('6359f1g62-6543-6789-124f-398763x98112') }}"
+client_secret   : "{{ azure_ad_client_secret | default('HhCDbhsjkuHGiNhe+RE4aQsdjjrdof8cSd/q8F/iEDhx=') }}"

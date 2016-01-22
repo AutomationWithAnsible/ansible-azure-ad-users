@@ -1,0 +1,10 @@
+---
+
+- name: Azure AD user account
+  azure_ad_users:
+    user_name       : "{{ azure_ad_user | default(omit) }}"
+    state           : "{{ azure_ad_state | default(omit) }}"
+    password        : "{{ azure_ad_password | default(omit) }}"
+    tenant_domain   : "{{ azure_ad_tenant_domain | default(omit) }}"
+    client_id       : "{{ azure_ad_client_id | default(omit) }}"
+    client_secret   : "{{ azure_ad_client_secret | default(omit) }}"
