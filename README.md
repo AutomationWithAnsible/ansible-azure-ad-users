@@ -14,13 +14,13 @@ The first step is to register an application in Azure AD. This is done in the AP
 
 The first page of the wizard as shown in Figure 3 needs a name for my application and the type of application it is. For this application, even though it is a console application, I am choosing the Web Application and/or Web API type. The reason I’m doing this is because I want my application to authenticate using application credentials rather than prompting the user running the application to authenticate with his/her username and password.
 
-![alt tag](http://justazure.com/wp-content/uploads/2015/02/AzureAD-05-03.png)
+![alt tag](http://rickrainey.com/wp-content/uploads/2016/02/2235-AzureAD-05-03.png)
 
 Figure 3: Registering an application in Azure AD
 
 Since I chose the Web Application/Web API application type, the next page in the wizard needs a valid sign-in URL and application ID URI. Since this is not really a web application any values will work as long as they are valid URL’s and URI’s as shown here in Figure 4.
 
-![alt tag](http://justazure.com/wp-content/uploads/2015/02/AzureAD-05-04.png)
+![alt tag](http://rickrainey.com/wp-content/uploads/2016/02/2235-AzureAD-05-04.png)
 
 Figure 4: Azure AD Application Registration Properties
 
@@ -30,13 +30,13 @@ CONFIGURE THE APPLICATION TO ACCESS THE AZURE AD GRAPH
 
 The configuration changes I need to make can be done in the CONFIGURE page for the application I registered using the Azure Management Portal. Shortly I’ll be getting into the code of the application and when I do there will be two pieces of information that I’m going to need. The first is the CLIENT ID which Azure AD generated for me when the application was registered. The other is a KEY (or secret) that I need to generate for my application so it can access the graph. Both of these are shown here in Figure 5. Pay attention to the message in the portal when you generate your key. As soon as you save the configuration change you will be able to see the key and copy it. After that, you will never be able to see it again so be sure to copy it before leaving the page. Otherwise, you will have to re-generate a new key. Also, notice that you can create multiple keys. This is to support key rollover scenarios. For example, as your key approaches expiration you can create a new key, update and deploy your code with the new key, and then remove the old key.
 
-![alt tag](http://justazure.com/wp-content/uploads/2015/02/AzureAD-05-05.png)
+![alt tag](http://rickrainey.com/wp-content/uploads/2016/02/2235-AzureAD-05-05.png)
 
 Figure 5: Client ID and Keys
 
 A little further down in the permissions to other applications section, I am adding an Application Permission indicating this application can Read and write directory data as shown in Figure 6. This will allow my application to query the directory and make changes to it such as adding new users.
 
-![alt tag](http://justazure.com/wp-content/uploads/2015/02/AzureAD-05-06.png)
+![alt tag](http://rickrainey.com/wp-content/uploads/2016/02/2235-AzureAD-05-06.png)
 
 Figure 6: Setting permissions to access the Graph API
 
