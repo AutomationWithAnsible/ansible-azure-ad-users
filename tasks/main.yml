@@ -8,3 +8,6 @@
     tenant_domain   : "{{ azure_ad_tenant_domain | default(omit) }}"
     client_id       : "{{ azure_ad_client_id | default(omit) }}"
     client_secret   : "{{ azure_ad_client_secret | default(omit) }}"
+    display_name    : "{{ azure_ad_display_name | default(omit) }}"
+    given_name      : "{{ azure_ad_given_name | default(omit) }}"
+    surname         : "{{ azure_ad_surname | default(omit) }}"
