@@ -305,6 +305,7 @@ def main():
 import collections # might not be needed
 import json
 import urllib
+import urllib2
 
 # import module snippets
 from ansible.module_utils.basic import *
